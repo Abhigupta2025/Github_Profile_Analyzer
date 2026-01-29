@@ -65,7 +65,3 @@ Built using **HTML, CSS, JavaScript, and Chart.js** — no frameworks.
 - **GitHub REST API** – Real-time data fetching
 
 ---
-
-## 📸 Screens (Optional)
-> Add screenshots or GIFs here to visually showcase the app.
-

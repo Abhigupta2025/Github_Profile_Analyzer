@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GitHub Profile Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app">
+
+    <!-- ================= HOME VIEW ================= -->
+    <section id="homeView" class="view">
+      <h1>GitHub Profile Analyzer</h1>
+      <p class="intro">
+        Analyze GitHub profiles, visualize programming languages,
+        and compare developers using real GitHub data.
+      </p>
+
+      <div class="home-actions">
+        <button id="goAnalyze">Analyze GitHub Profile</button>
+        <button id="goCompare">Compare Two Profiles</button>
+      </div>
+    </section>
+
+    <!-- ================= ANALYZE VIEW ================= -->
+    <section id="analyzeView" class="view hidden">
+
+      <header>
+        <button class="backBtn">← Back</button>
+        <h1>GitHub Profile Analyzer</h1>
+        <p>Analyze GitHub profiles and visualize tech stack</p>
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+      </header>
+
+      <div class="search">
+        <input type="text" id="username" placeholder="GitHub username" />
+        <button id="searchBtn">Analyze</button>
+      </div>
+
+      <div class="card skeleton hidden" id="profileSkeleton"></div>
+
+      <div class="history hidden" id="searchHistory">
+        <p class="history-title">Recent Searches</p>
+        <div class="history-list" id="historyList"></div>
+      </div>
+
+      <!-- PROFILE -->
+      <div class="card profile-card hidden" id="profile"></div>
+
+      <!-- LANGUAGE CHART -->
+      <div class="chart-wrapper">
+        <div class="card chart-card hidden" id="chartCard">
+          <h3>Language Usage</h3>
+          <canvas id="languageChart"></canvas>
+          <p class="chart-info">
+            This chart shows the distribution of programming languages
+            used across the public repositories of the selected GitHub profile.
+          </p>
+        </div>
+      </div>
+
+      <!-- REPOSITORIES -->
+      <div class="card repos-card hidden" id="repos">
+        <div class="repo-filters">
+          <select id="sortRepos">
+            <option value="">Sort by</option>
+            <option value="stars">Most Stars</option>
+            <option value="updated">Recently Updated</option>
+          </select>
+
+          <select id="filterLanguage">
+            <option value="">All Languages</option>
+          </select>
+        </div>
+
+        <div id="repoList"></div>
+      </div>
+    </section>
+
+    <!-- ================= COMPARE VIEW ================= -->
+    <section id="compareView" class="view hidden">
+      <button class="backBtn">← Back</button>
+
+      <h2>Compare GitHub Profiles</h2>
+
+      <div class="compare-inputs">
+        <input type="text" id="user1" placeholder="First username" />
+        <input type="text" id="user2" placeholder="Second username" />
+        <button id="compareBtn">Compare</button>
+      </div>
+
+      <div class="compare-results">
+  <div class="compare-card">
+    <div id="compareUser1"></div>
+    <canvas id="chartUser1"></canvas>
+  </div>
+
+  <div class="compare-card">
+    <div id="compareUser2"></div>
+    <canvas id="chartUser2"></canvas>
+    </div>
+  </div>
+
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>
+      Built with ❤️ using HTML, CSS, JavaScript & GitHub API <br />
+      <span>Made by Abhishek Gupta</span>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

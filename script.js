@@ -3,7 +3,7 @@
  ***************************************/
 
 //  GitHub Token (LOCAL USE ONLY)
-const TOKEN = window.GITHUB_TOKEN || "";
+const TOKEN = "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";
 
 /* ---------- VIEW ELEMENTS ---------- */
 const homeView = document.getElementById("homeView");
